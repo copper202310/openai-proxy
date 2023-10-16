@@ -4,7 +4,7 @@ const OPENAI_API_HOST = "api.openai.com";
 
 serve(async (request) => {
   const url = new URL(request.url);
-
+  console.log(request)
   if (url.pathname === "/") {
     return fetch(new URL("./Readme.md", import.meta.url));
   }
